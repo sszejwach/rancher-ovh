@@ -1,0 +1,19 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+CgiISPPjHfztO6i5MyT2yX3o2AKJmAXyg1s2kl/r5cDFY+kJcSFH8aQGOHDM24o+dc1L/C2lmm0pimhUzmU9aL7vUtLzHKztU7XgPqTDKYGAzsHyHCwBXXpiF+vNXeatce3rMOffQoowfeV5LgazehZUZ2A+lorbT45yUQwL5s4x7Y3HZWUcDsDbKpbgK8AbfMCp+usnx2jHckjjmtEHPnSKCUqHSeLlER35mZEzuF1pmuH0CyJN/A5O/33yL6+lHtBswHTWftAP3RVhhhpNgQ5d1nffqHgnfvY4XaeED7zhnXgCtgMj01ABEwExVEl2gCD1MqWDbfBuHIHPVjux sszejwach
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEvr+XbplbWP015fCMQnkGI0Qmsph/o+MJf8E3hAL+8pLCKW9BIJGQDlzNcvdJy4f1huROG/Ws4jp5yEL0Y45DzK74CVvQbm7a6nqRwGhVyJru19tjkMGWglbSNLzRIiiPfBmLVM7n+FxE4QZu/1qXHL2bs6pjZfTs+CVTrxHwkBWQwW3uMcAHiCwSHgNuuBNsCkOnr5DyB8WjhILoEoiNMb+5jlwp3cz7NtGJmFogkdAYTKbzMPjjwveSTl/VReTg6v4BVEruffPBQ95MfbZNtzhZuV23c8xqs5CuSZdYSfYTE0cKrmnpI3dQTArZtnJnJSUQcRhZB36hKn2hQd2D mhue
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgXe2Zt+PG6CUPTeNDvd7QxjHJTbsPpSvoKvbUI6ymzxd/fleZGrYYWqmv0QWShSrZLaxMIv6gwdzs79RXQETvG6Kwd1Ke2pZHa1dRBJgcMFtS64gCOxO+cz4fbWN0HtC2uNeslMEsz/xE6rlekqd13HZz4O2hYUcdvYVCZiQAGfkbdzuKiElWwAkO+NnOW1wPOjOk8POiNiZhTy/vWiZ11ogGv2rwqYLqX/w9JXkwaXJCkD/SvhNQuCHCMxsqWkP0jsAmBJrnzfOE63pxkjm89WsxvbvhRObIEo8Fg6DN3trPGMhvj1180eBJohDn8Fs82XGrY9TSNnqP5gZpgLnb cjuif
+rancher:
+  network:
+    interfaces:
+      eth0:
+        address: 10.68.0.170/19
+        gateway: 10.68.15.254
+        mtu: 1500
+        dhcp: false
+    dns:
+      nameservers:
+        - 10.68.1.109
+        - 10.68.1.114
+	- 10.68.1.91
+	- 10.68.1.104
